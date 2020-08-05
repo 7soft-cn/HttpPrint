@@ -51,7 +51,7 @@
             // 
             // pDoc
             // 
-            this.pDoc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.pdControl_PrintPage);
+            this.pDoc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.PdControl_PrintPage);
             // 
             // btnRefresh
             // 
@@ -61,7 +61,7 @@
             this.btnRefresh.TabIndex = 8;
             this.btnRefresh.Text = "刷新显示";
             this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            this.btnRefresh.Click += new System.EventHandler(this.BtnRefresh_Click);
             // 
             // label1
             // 
@@ -97,7 +97,7 @@
             this.btnPrint.TabIndex = 10;
             this.btnPrint.Text = "打印";
             this.btnPrint.UseVisualStyleBackColor = true;
-            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            this.btnPrint.Click += new System.EventHandler(this.BtnPrint_Click);
             // 
             // cmbPrinter
             // 

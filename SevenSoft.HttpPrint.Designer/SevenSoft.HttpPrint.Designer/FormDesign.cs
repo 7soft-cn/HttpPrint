@@ -43,7 +43,7 @@ namespace SevenSoft.HttpPrint.Designer
             }
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
+        private void BtnRefresh_Click(object sender, EventArgs e)
         {
             LoadTemplate();
             txtTemplate.Text = PrintHelper.ConvertJsonString(txtTemplate.Text);
@@ -62,7 +62,7 @@ namespace SevenSoft.HttpPrint.Designer
             this.pDoc.DefaultPageSettings.PaperSize = new PaperSize("Custum", printHelper.width, printHelper.height);//A5纸尺寸换算成 百分之一英寸
         }
 
-        private void pdControl_PrintPage(object sender, PrintPageEventArgs e)
+        private void PdControl_PrintPage(object sender, PrintPageEventArgs e)
         {
             Graphics g = e.Graphics;
             g.PageScale = 1;
@@ -72,7 +72,7 @@ namespace SevenSoft.HttpPrint.Designer
         }
 
 
-        private void btnPrint_Click(object sender, EventArgs e)
+        private void BtnPrint_Click(object sender, EventArgs e)
         {
             try
             {
@@ -94,6 +94,7 @@ namespace SevenSoft.HttpPrint.Designer
             }
             catch (Exception ex)
             {
+                MessageBox.Show($"打印出错{Environment.NewLine}{ex}");
                 return;
             }
         }
