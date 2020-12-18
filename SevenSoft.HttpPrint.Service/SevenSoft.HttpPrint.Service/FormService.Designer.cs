@@ -50,6 +50,10 @@
             this.cmbPrinter.Size = new System.Drawing.Size(241, 20);
             this.cmbPrinter.TabIndex = 10;
             // 
+            // pDoc
+            // 
+            this.pDoc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.pdControl_PrintPage);
+            // 
             // FormService
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -70,6 +74,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cmbPrinter;
         private System.Drawing.Printing.PrintDocument pDoc;
+
+
     }
 }
 
