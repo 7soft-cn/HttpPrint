@@ -48,6 +48,7 @@ namespace DesignerPlus
             LoadTemplate();
             txtTemplate.Text = PrintHelper.ConvertJsonString(txtTemplate.Text);
             this.ppCtlDisplay.InvalidatePreview();
+            this.panelControl.Invalidate();
         }
 
         /// <summary>
@@ -99,5 +100,19 @@ namespace DesignerPlus
             }
         }
 
+        private void panelControl_MouseClick(object sender, MouseEventArgs e)
+        {
+
+                
+        }
+
+        private void panelControl_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            g.PageScale = 1;
+            g.PageUnit = GraphicsUnit.Document;//单位
+            //g.FillRectangle(Brushes.Linen, 0, 0, 900, 600);
+            printHelper.Print(g);
+        }
     }
 }

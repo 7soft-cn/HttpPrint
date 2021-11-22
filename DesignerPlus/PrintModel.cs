@@ -46,6 +46,7 @@ namespace SevenSoft.HttpPrint.Utils
         /// <summary>
         /// 模板
         /// </summary>
+        [JsonProperty("items")]
         public List<PrintItem> Items { get; set; }
     }
 

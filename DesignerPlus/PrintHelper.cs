@@ -109,7 +109,7 @@ namespace SevenSoft.HttpPrint.Utils
         /// <returns></returns>
         public static Template String2Template(string str)
         {
-            return JsonConvert.DeserializeObject<Template>(str);
+                return JsonConvert.DeserializeObject<Template>(str);
         }
 
         /// <summary>
